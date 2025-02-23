@@ -1,0 +1,472 @@
+:root {
+    --color-primario: #264653;
+    /* Azul oscuro */
+    --color-secundario: #f4f4f4;
+    /* Fondo claro */
+    --color-texto: #333333;
+    /* Texto */
+    --color-acento: #2a9d8f;
+    /* Verde turquesa */
+    --color-hover: #e76f51;
+    /* Naranja */
+    --color-fondo: #ffffff;
+    /* Blanco */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Tipografía */
+h1,
+h2,
+h3 {
+    color: var(--color-primario);
+    font-weight: 600;
+}
+
+.display-4 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color-primario) !important;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.navbar.fixed-top {
+    background-color: rgba(38, 70, 83, 0.95) !important;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--color-acento) !important;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-hover) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 10rem 0 6rem;
+    background: linear-gradient(135deg, var(--color-secundario) 50%, var(--color-fondo) 100%);
+}
+
+.btn-custom {
+    background: var(--color-primario);
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: var(--color-acento);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-primario);
+    color: var(--color-primario);
+}
+
+.btn-outline:hover {
+    background: var(--color-acento);
+    color: #fff;
+    border-color: var(--color-acento);
+}
+
+/* Secciones */
+.benefits-section,
+.projects-section,
+.testimonials-section {
+    padding: 6rem 0;
+}
+
+.projects-section {
+    background: var(--color-fondo);
+}
+
+/* Tarjetas */
+.card {
+    background: var(--color-fondo);
+    border: none;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+    color: var(--color-acento);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-body h3 {
+    font-size: 1.5rem;
+}
+
+/* Testimonios */
+.testimonials-section .card {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 6rem 0;
+    background: var(--color-primario);
+    color: #fff;
+}
+
+.cta-section h2 {
+    color: #fff;
+}
+
+.cta-section .lead {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer */
+footer {
+    background: var(--color-primario);
+    color: #fff;
+    padding: 4rem 0;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-acento);
+}
+
+/* ================================================== */
+/*           CSS ADICIONAL PARA MEJORAS             */
+/* ================================================== */
+
+/* Mejora en la Hero Section: overlay para resaltar el contenido */
+.hero-section {
+    position: relative;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Decoración para los títulos h2: subrayado centrado */
+h2 {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-hover);
+    margin: 0.5rem auto 0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-left: 1rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section {
+        padding: 6rem 0 4rem;
+    }
+}
+
+/* ================================================== */
+/*           CSS ADICIONAL PARA MEJORAS             */
+/* ================================================== */
+
+/* Hero Section con overlay */
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-secundario) 50%, var(--color-fondo) 100%);
+    padding: 10rem 0 6rem;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Decoración en títulos h2 */
+h2 {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-hover);
+    margin: 0.5rem auto 0;
+}
+
+/* Sección Call To Action */
+.cta-section {
+    padding: 6rem 0;
+    background: var(--color-primario);
+    color: #fff;
+}
+
+.cta-section a.btn-custom {
+    margin-top: 1.5rem;
+}
+
+/* ================================================== */
+/*           CSS ADICIONAL PARA MEJORAS             */
+/* ================================================== */
+
+/* Aseguramos que la hero section tenga un overlay para resaltar el texto */
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-secundario) 50%, var(--color-fondo) 100%);
+    padding: 10rem 0 6rem;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Decoración en títulos h2 */
+h2 {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-hover);
+    margin: 0.5rem auto 0;
+}
+
+/* Sección Call To Action */
+.cta-section {
+    padding: 6rem 0;
+    background: var(--color-primario);
+    color: #fff;
+}
+
+/* Estilos adicionales para mejorar el formulario de contacto */
+.contact-container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones para todos los botones */
+button,
+a.btn,
+.btn,
+.btn-custom,
+.btn-outline {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+a.btn:hover,
+.btn:hover,
+.btn-custom:hover,
+.btn-outline:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para el botón de modo oscuro integrado en la barra */
+#dark-mode-toggle {
+    border: none;
+    /* Sin borde para integración limpia */
+    background: transparent;
+    /* Fondo transparente para combinar con el navbar */
+    color: #fff;
+    /* Color blanco para armonizar con el navbar */
+    font-size: 1.2rem;
+    /* Tamaño del ícono */
+    cursor: pointer;
+    /* Indica que es interactivo */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    color: var(--color-acento);
+    /* Cambia a color de acento al hacer hover */
+    transform: scale(1.1);
+    /* Efecto de zoom al pasar el cursor */
+}
+
+/* Aumenta ligeramente el tamaño al hacer hover */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primario);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode-bubble:hover {
+    background-color: var(--color-acento);
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-icon {
+    position: fixed;
+    /* Posición fija respecto a la ventana */
+    bottom: 15px;
+    /* Distancia desde el fondo */
+    right: 20px;
+    /* Distancia desde el borde derecho */
+    font-size: 2.5rem;
+    /* Tamaño del ícono */
+    color: #25D366;
+    /* Color característico de WhatsApp */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Transición suave para hover */
+    z-index: 1000;
+    /* Se muestra sobre otros elementos */
+}
+
+.whatsapp-icon:hover {
+    color: #128C7E;
+    /* Color en hover (más oscuro) */
+    transform: scale(1.1);
+    /* Efecto de zoom al pasar el cursor */
+}
