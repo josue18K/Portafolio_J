@@ -87,8 +87,26 @@ p.lead {
 .hero-section {
     padding: 10rem 0 6rem;
     background: linear-gradient(135deg, var(--color-secundario) 50%, var(--color-fondo) 100%);
+    position: relative;
 }
 
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Botones */
 .btn-custom {
     background: var(--color-primario);
     color: #fff;
@@ -137,6 +155,7 @@ p.lead {
     padding: 2.5rem;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    margin-bottom: 2rem;
 }
 
 .card:hover {
@@ -197,32 +216,7 @@ footer {
     color: var(--color-acento);
 }
 
-/* ================================================== */
-/*           CSS ADICIONAL PARA MEJORAS             */
-/* ================================================== */
-
-/* Mejora en la Hero Section: overlay para resaltar el contenido */
-.hero-section {
-    position: relative;
-}
-
-.hero-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-}
-
-.hero-section .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Decoración para los títulos h2: subrayado centrado */
+/* Decoración para títulos h2 */
 h2 {
     position: relative;
     margin-bottom: 1.5rem;
@@ -237,128 +231,7 @@ h2::after {
     margin: 0.5rem auto 0;
 }
 
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .navbar-nav .nav-link {
-        margin-left: 1rem;
-    }
-
-    .display-4 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero-section {
-        padding: 6rem 0 4rem;
-    }
-}
-
-/* ================================================== */
-/*           CSS ADICIONAL PARA MEJORAS             */
-/* ================================================== */
-
-/* Hero Section con overlay */
-.hero-section {
-    position: relative;
-    background: linear-gradient(135deg, var(--color-secundario) 50%, var(--color-fondo) 100%);
-    padding: 10rem 0 6rem;
-}
-
-.hero-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-}
-
-.hero-section .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Decoración en títulos h2 */
-h2 {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: var(--color-hover);
-    margin: 0.5rem auto 0;
-}
-
-/* Sección Call To Action */
-.cta-section {
-    padding: 6rem 0;
-    background: var(--color-primario);
-    color: #fff;
-}
-
-.cta-section a.btn-custom {
-    margin-top: 1.5rem;
-}
-
-/* ================================================== */
-/*           CSS ADICIONAL PARA MEJORAS             */
-/* ================================================== */
-
-/* Aseguramos que la hero section tenga un overlay para resaltar el texto */
-.hero-section {
-    position: relative;
-    background: linear-gradient(135deg, var(--color-secundario) 50%, var(--color-fondo) 100%);
-    padding: 10rem 0 6rem;
-}
-
-.hero-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-}
-
-.hero-section .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Decoración en títulos h2 */
-h2 {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: var(--color-hover);
-    margin: 0.5rem auto 0;
-}
-
-/* Sección Call To Action */
-.cta-section {
-    padding: 6rem 0;
-    background: var(--color-primario);
-    color: #fff;
-}
-
-/* Estilos adicionales para mejorar el formulario de contacto */
+/* Estilos para el formulario de contacto */
 .contact-container {
     background: #fff;
     border-radius: 10px;
@@ -366,7 +239,7 @@ h2::after {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Animaciones para todos los botones */
+/* Animaciones para botones */
 button,
 a.btn,
 .btn,
@@ -384,45 +257,22 @@ a.btn:hover,
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilos para el botón de modo oscuro integrado en la barra */
+/* Botón de modo oscuro */
 #dark-mode-toggle {
     border: none;
-    /* Sin borde para integración limpia */
     background: transparent;
-    /* Fondo transparente para combinar con el navbar */
     color: #fff;
-    /* Color blanco para armonizar con el navbar */
     font-size: 1.2rem;
-    /* Tamaño del ícono */
     cursor: pointer;
-    /* Indica que es interactivo */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #dark-mode-toggle:hover {
     color: var(--color-acento);
-    /* Cambia a color de acento al hacer hover */
     transform: scale(1.1);
-    /* Efecto de zoom al pasar el cursor */
 }
 
-/* Aumenta ligeramente el tamaño al hacer hover */
-
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-mode .navbar,
-body.dark-mode footer {
-    background-color: #1e1e1e !important;
-}
-
-body.dark-mode .navbar-brand,
-body.dark-mode .nav-link {
-    color: #e0e0e0 !important;
-}
-
+/* Botón de modo oscuro en burbuja */
 .dark-mode-bubble {
     position: fixed;
     bottom: 20px;
@@ -447,26 +297,62 @@ body.dark-mode .nav-link {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Icono de WhatsApp */
 .whatsapp-icon {
     position: fixed;
-    /* Posición fija respecto a la ventana */
     bottom: 15px;
-    /* Distancia desde el fondo */
     right: 20px;
-    /* Distancia desde el borde derecho */
     font-size: 2.5rem;
-    /* Tamaño del ícono */
     color: #25D366;
-    /* Color característico de WhatsApp */
     transition: transform 0.3s ease, color 0.3s ease;
-    /* Transición suave para hover */
     z-index: 1000;
-    /* Se muestra sobre otros elementos */
 }
 
 .whatsapp-icon:hover {
     color: #128C7E;
-    /* Color en hover (más oscuro) */
     transform: scale(1.1);
-    /* Efecto de zoom al pasar el cursor */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-left: 1rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section {
+        padding: 6rem 0 4rem;
+    }
+}
+
+/* Logo animado "JTech Sites" */
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    /* Ajusta el tamaño según lo necesites */
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #264653, #2a9d8f, #e76f51);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s linear infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
 }
