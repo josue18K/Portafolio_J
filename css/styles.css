@@ -209,6 +209,17 @@ footer {
     padding: 4rem 0;
 }
 
+/* Estilo para enlaces en el footer */
+.footer-link {
+    text-decoration: none;
+    color: #e76f51; /* Color principal para estos enlaces */
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-acento); /* Color al pasar el cursor */
+}
+
 .footer-social a {
     color: #fff;
     font-size: 1.8rem;
@@ -307,15 +318,12 @@ a.btn:hover,
     .navbar-nav .nav-link {
         margin-left: 1rem;
     }
-
     .display-4 {
         font-size: 2.5rem;
     }
-
     h2 {
         font-size: 1.8rem;
     }
-
     .hero-section {
         padding: 6rem 0 4rem;
     }
@@ -340,7 +348,6 @@ a.btn:hover,
     0% {
         background-position: 0%;
     }
-
     100% {
         background-position: 200%;
     }
@@ -351,37 +358,33 @@ a.btn:hover,
     0% {
         transform: scale(1) rotate(0deg);
     }
-
     30% {
         transform: scale(1.1) rotate(3deg);
     }
-
     50% {
         transform: scale(0.95) rotate(-3deg);
     }
-
     70% {
         transform: scale(1.05) rotate(2deg);
     }
-
     100% {
         transform: scale(1) rotate(0deg);
     }
 }
 
-/* Configuración base para los botones */
+/* Configuración base para los botones con animación personalizada */
 .btn-custom {
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto de animación al pasar el mouse */
+/* Efecto de animación al pasar el mouse en botones personalizados */
 .btn-custom:hover {
     animation: buttonBounce 0.6s ease-out;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Opcional: efecto de borde animado */
+/* Opcional: efecto de borde animado en botones personalizados */
 .btn-custom::after {
     content: "";
     position: absolute;
