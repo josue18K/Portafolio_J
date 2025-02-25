@@ -212,12 +212,14 @@ footer {
 /* Estilo para enlaces en el footer */
 .footer-link {
     text-decoration: none;
-    color: #e76f51; /* Color principal para estos enlaces */
+    color: #e76f51;
+    /* Color principal para estos enlaces */
     transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: var(--color-acento); /* Color al pasar el cursor */
+    color: var(--color-acento);
+    /* Color al pasar el cursor */
 }
 
 .footer-social a {
@@ -318,12 +320,15 @@ a.btn:hover,
     .navbar-nav .nav-link {
         margin-left: 1rem;
     }
+
     .display-4 {
         font-size: 2.5rem;
     }
+
     h2 {
         font-size: 1.8rem;
     }
+
     .hero-section {
         padding: 6rem 0 4rem;
     }
@@ -332,7 +337,8 @@ a.btn:hover,
 /* Logo animado */
 .logo-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    /* Tamaño reducido */
     font-weight: 700;
     text-transform: uppercase;
     background: linear-gradient(90deg, #264653, #2a9d8f, #e76f51);
@@ -348,6 +354,7 @@ a.btn:hover,
     0% {
         background-position: 0%;
     }
+
     100% {
         background-position: 200%;
     }
@@ -358,15 +365,19 @@ a.btn:hover,
     0% {
         transform: scale(1) rotate(0deg);
     }
+
     30% {
         transform: scale(1.1) rotate(3deg);
     }
+
     50% {
         transform: scale(0.95) rotate(-3deg);
     }
+
     70% {
         transform: scale(1.05) rotate(2deg);
     }
+
     100% {
         transform: scale(1) rotate(0deg);
     }
@@ -399,4 +410,25 @@ a.btn:hover,
 
 .btn-custom:hover::after {
     border-color: var(--color-acento);
+}
+
+
+.navbar-toggler {
+    border: none !important;
+    /* Quita el borde */
+    outline: none !important;
+    background: transparent;
+    /* Quita cualquier fondo */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Oculta el icono predeterminado */
+}
+
+.navbar-toggler i {
+    color: red;
+    /* Color del icono, puedes cambiarlo si lo deseas */
+    font-size: 1.5rem;
+    /* Tamaño del icono */
 }
